@@ -1,7 +1,8 @@
 Template.roundItem.helpers({
 	detailsTestLink: function() {
-		var a=document.createElement('a');
-		a.href=this.payoutdetails;
-		return a.hostname
+		a={};
+		a.details=this.payoutdetails;
+		// do processing on details, e.g. convert to a text narrative, breaking out components of payout
+		return a.details;
 	}
 });
