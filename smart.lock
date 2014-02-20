@@ -4,7 +4,8 @@
     "basePackages": {
       "accounts-ui-bootstrap-dropdown": {},
       "cookie": {},
-      "headers": {}
+      "headers": {},
+      "spin": {}
     },
     "packages": {
       "accounts-ui-bootstrap-dropdown": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/gadicohen/meteor-headers.git",
         "tag": "v0.0.15",
         "commit": "0852ea4df6b1314914c4355160d0b0fd61675aea"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v0.2.2",
+        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
       }
     }
   }
