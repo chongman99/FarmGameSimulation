@@ -1,0 +1,1 @@
+GameInitializations = new Meteor.Collection('gameInitializations');

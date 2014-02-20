@@ -1,0 +1,12 @@
+<!-- This is the stub of what will be displayed to the user below each round's gameplay. -->
+
+<template name="roundsHistory">
+	<div class="rounds">
+		<hr>
+		<hr>
+		<center> <p> ROUND HISTORY BELOW </p> </center>
+		{{#each rounds}}
+			{{> roundItem}}  <!-- ZZZZZ set some historyDisplayMode to display as list or as squares. -->
+		{{/each}}
+	</div>
+</template>

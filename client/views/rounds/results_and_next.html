@@ -1,0 +1,18 @@
+<!-- blank box until selection is made.
+Then the results displayed for that round plus a button to go to the next round.
+ -->
+
+<template name="resultsAndNext">
+	<div>
+		{{zzztemp}}
+		{{#with currentRound}}
+			{{> roundItem}}
+		{{/with}}
+		<hr>
+		
+		<h4><a href={{roundPagePath}}>Please click here to go to the next round.</a></h4>
+		<hr>
+
+
+	</div>
+</template>
