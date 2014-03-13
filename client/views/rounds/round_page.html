@@ -1,11 +1,11 @@
 <template name="roundPage">
   <p> Round Page </p>
-
+  {{initialize}}
 	{{> shortInstructions}}
   {{> notifications}}
   {{> roundHeader}}
   {{#isolate}}
- 	 {{> decisionForm}}
+ 		{{> decisionForm}}
   {{/isolate}}
   {{> resultsAndNext}} 
   {{> roundsHistory}}

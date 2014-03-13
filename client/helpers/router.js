@@ -1,5 +1,5 @@
 Meteor.Router.add({
-	'/': 'newGame',
+	'/': 'newGameEntryForm',
 
 	'/clearCookie': 'clearCookie',
 

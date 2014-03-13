@@ -27,4 +27,26 @@ if (Rounds.find().count() === 0) {
 }
 
 
+if (GameIds.find().count() === 0) {  
+//beginner note: Rounds is the Collection name
+	defaultGameSet= {
+		  gameId: "XMYGAME",
+		  entryPassword: "Xpassword"
+	};
+
+	GameIds.insert({
+		gameSet: defaultGameSet,
+ 		closed: false
+	});
+
+	GameIds.insert({
+		gameSet: {gameId: "CLOSEDGAME", entryPassword: "CLOSEDGAME"},
+ 		closed: true
+	});
+
+}
+
+
+
+
 

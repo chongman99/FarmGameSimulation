@@ -5,3 +5,7 @@ Meteor.publish('rounds', function() {
 Meteor.publish('gameInitializations', function() {
 	return GameInitializations.find();
 });
+
+Meteor.publish('gameIds', function() {
+	return GameIds.find();
+});

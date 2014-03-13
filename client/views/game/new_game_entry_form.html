@@ -1,0 +1,39 @@
+<template name="newGameEntryForm">
+	{{sessionInitialization}}
+	<form class="main">
+		<div><p>Please enter the GameId and EntryPassword (given by email or from Amazon MTurk).</p>
+		</div>
+		<div class="control-group">
+			
+			<div class="controls">
+				<input name="gameId" type="txt" value="" placeholder="XDH73844"/> &nbsp GameId
+			</div> 
+		</div>
+		<div class="control-group">
+			<!-- <label class="control-label">EntryPassword</label>  -->
+			<div class="controls">
+				<input name="entryPassword" type="txt" value=""/> &nbsp EntryPassword
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" value="Submit GameId / EntryPassword" class="btn btn-primary"/>
+			</div>
+		</div>
+	</form>
+
+
+	<hr>
+	<hr>
+	<p>Overview of Steps</p>
+	<ol>
+		<li> Step1: Have them enter the GameId and EntryPassword
+		<li style="list-style-type:none">
+			<ul>
+				<li>farmGameCookie set
+				<li>gameSet set
+				<li>lastRoundNum set to 0 (in case there are no records)
+			</ul>
+		</li>
+
+</template>
