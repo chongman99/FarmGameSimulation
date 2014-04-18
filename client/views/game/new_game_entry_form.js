@@ -1,15 +1,19 @@
 Template.newGameEntryForm.events({
 	sessionInitialization: function() {
 		Session.set('checkCompleted' , false); 
+		Cookie.remove('currentGameSet');
+		Cookie.remove('currentGameParameters');
+		
 		if (!!Cookie.get('farmGameCookie')) {
-			ZZZZZlastround=0; //Look this up in the tables for this farmGameCookie.
-			if (!ZZZZZlastround) { //picks up both null, undefined, and 0 }
+			ZZZZZlastround=0; //STUBBED: Look this up in the tables for this farmGameCookie.
+			if (ZZZZZlastround==0) {
 				alert("go directly to game. you never played yet");
 				//lookup the cookie in the GameInitializations. Grab the gameSet. Set the Session env variables.
+				//if not gameSet
 			}
 			else {
 				alert("You already played a game or did not complete your current game.");
-				// Ask Redirect to Display details of their completed game.
+				// If completed, 
 			}
 		}
 		else {
@@ -28,14 +32,15 @@ Template.newGameEntryForm.events({
 
 		//validates the game parameters
 		if ( !!GameIds.findOne({gameSet:enteredGameSet}) ) {
-			if (!GameIds.findOne({gameSet:enteredGameSet}).closed) { 
-				Session.set('currentGame', enteredGameSet)
+			if (!GameIds.findOne({gameSet:enteredGameSet}).closed) {  
+				Session.set('currentGameSet', enteredGameSet)
 				myClientIP = headers.getClientIP();
 				GameInitializations.insert({
 					gameSet: enteredGameSet,
 					cookieId: Cookie.get('farmGameCookie'),
 					IP : myClientIP
 				});
+				Session.set('currentGameParameters', GameIds.findOne({gameSet:enteredGameSet}).gameParameters);
 				Meteor.Router.to('newGame');
 			}
 			else {
@@ -44,7 +49,7 @@ Template.newGameEntryForm.events({
 			}
 		}
 		else {
-			alert("This game is does not exist. Please reenter crednetials.");
+			alert("This game does not exist. Please reenter crednetials.");
 			Meteor.Router.to('newGameEntryForm');
 		}
 

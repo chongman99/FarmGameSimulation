@@ -5,8 +5,16 @@
 		<hr>
 		<hr>
 		<center> <p> ROUND HISTORY BELOW </p> </center>
-		{{#each rounds}}
-			{{> roundItem}}  <!-- ZZZZZ set some historyDisplayMode to display as list or as squares. -->
-		{{/each}}
+		{{#if displayGraphical}}
+			{{> roundDiplayedAsBoxes}} <!-- display as squares -->
+		{{/if}}
+
+		{{#if displaylist}}
+			{{#each rounds}}
+				{{> roundItem}}  <!-- ZZZZZ set some historyDisplayMode to display as list . -->
+			{{/each}}
+		{{/if}}
+
+
 	</div>
 </template>

@@ -4,9 +4,21 @@
 	{{> shortInstructions}}
   {{> notifications}}
   {{> roundHeader}}
-  {{#isolate}}
- 		{{> decisionForm}}
-  {{/isolate}}
+  {{checkstage moveStage}} 
+  Should read TRUE above
+  {{#if currentStageMoveWithNotifications}}
+  <div id="box"> 
+	  <p>STICK A BOX HERE
+	  TOP OF BOX
+	  {{#isolate}}
+	 		{{> decisionForm}}
+	  {{/isolate}}
+	  <p>BOTTOM OF BOX
+  </div>
+  {{/if}}
+  {{#if resultStep}}
+
+  {{/if}}
   {{> resultsAndNext}} 
   {{> roundsHistory}}
 

@@ -2,5 +2,15 @@
   {{> instructions}}
   <!-- sessionInitialize Creates a cookie for this session linked to the IP and the computer. -->
   {{> IRBConsent}}
-  <h3><a href="{{roundPagePath}}">Click here to start the game</a> 
+  <hr>
+  <hr>
+  {{#unless testOfReadingRules}}<h3><a href="{{roundPagePath}}">Click here to start the game</a> </h3>{{/unless}}
+
+  {{#if testOfReadingRules}}
+    <div class="largerFont">
+    	<p> This is where the reading Rules Test would go. </p>
+    	<p> Stick some reading rules multiple choice questions. Have them submit. </p>
+    	<h3><a href="{{roundPagePath}}">Click here IF YOUR ANSWERS ABOVE ARE CORRECT</a> </h3>
+    </div>
+  {{/if}}
 </template>
