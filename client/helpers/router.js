@@ -15,6 +15,8 @@ Meteor.Router.add({
 
 	'/singleBox': 'singleBox',
 
+	'/roundsBoxHistory': 'roundsBoxHistory',
+
 	'/roundById/:_id': {
 		to: 'roundDetailPage',
 		and: function(id) { Session.set('currentRoundId',id);  Session.set('monkey','john'); }
