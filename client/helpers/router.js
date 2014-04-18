@@ -13,6 +13,8 @@ Meteor.Router.add({
 
 	'/testDisplayBoxes': 'testDisplayBoxes',
 
+	'/singleBox': 'singleBox',
+
 	'/roundById/:_id': {
 		to: 'roundDetailPage',
 		and: function(id) { Session.set('currentRoundId',id);  Session.set('monkey','john'); }
