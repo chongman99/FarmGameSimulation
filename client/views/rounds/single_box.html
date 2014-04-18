@@ -1,0 +1,21 @@
+<template name="singleBox">
+    {{#if failure}}
+        <td class="red-box">
+            {{#if insured}}
+                <span class="top-right-yellow">x</span>
+            {{else}}
+                <span class="top-right-blue">x</span>
+            {{/if}}
+            <p>{{payout}}</p>
+        </td>
+    {{else}}
+        <td class="green-box">
+            {{#if insured}}
+            <span class="top-right-yellow">x</span>
+            {{else}}
+            <span class="top-right-blue">x</span>
+            {{/if}}
+            <p>{{payout}}</p>
+        </td>
+    {{/if}}
+</template>
