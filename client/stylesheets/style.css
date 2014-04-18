@@ -123,3 +123,27 @@ body {
   .load-more:hover {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1); }
+
+.red-box{
+    background-color: red;
+}
+
+.green-box{
+    background-color: green;
+}
+
+.big-font{
+    font-size: 2em;
+}
+
+.small-font{
+    font-size: 1em;
+}
+
+.top-right-blue{
+    background-color: blue;
+}
+
+.top-right-yellow{
+    background-color: yellow;
+}
