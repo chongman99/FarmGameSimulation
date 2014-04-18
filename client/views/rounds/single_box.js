@@ -14,4 +14,5 @@ Template.singleBox.helpers({
 		return a;
 	}
 
+
 });
