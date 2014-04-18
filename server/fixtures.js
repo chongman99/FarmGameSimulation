@@ -24,6 +24,63 @@ if (Rounds.find().count() === 0) {
 		endtime: new Date(2014,6,5,6,6,6)
 	});
 
+
+		Rounds.insert({
+		userid: 'Howard',
+		roundNum: 3,
+		failYN: false,
+		insuredYN: true,
+		payout: 0.65,
+		completedYN: 'Y',
+		payoutDetails: 'none',
+		starttime: new Date(2014,5,5,5,5,5),
+		endtime: new Date(2014,5,5,6,6,6)
+	});
+
+	Rounds.insert({
+		userid: 'Howard',
+		roundNum: 4,
+		failYN: false,
+		insuredYN: false,
+		payout: 0,
+		completedYN: 'Y',
+		payoutDetails: 'none',
+		starttime: new Date(2014,6,5,5,5,5),
+		endtime: new Date(2014,6,5,6,6,6)
+	});
+
+	for (var i=5;i<30;i++)
+	{
+		if (i%4==1)
+		  {
+		  	a=false;
+		  }
+		else
+			{
+				a=true;
+			}
+		if (i%3==1)
+		  {
+		  	b=false;
+		  }
+		else
+			{
+				b=true;
+			}
+		Rounds.insert({
+			userid: 'Howard',
+			roundNum: i,
+			failYN: a,
+			insuredYN: b,
+			payout: 0.7,
+			completedYN: 'Y',
+			payoutDetails: 'none',
+			starttime: new Date(2014,6,5,5,5,5),
+			endtime: new Date(2014,6,5,6,6,6)
+		});
+	}
+
+
 }
 
 // allowableGameParams= {

@@ -6,11 +6,11 @@ Template.singleBox.helpers({
 		return a.details;
 	} ,
 	failure: function() {
-		a=this.failYN=="Y";
+		a=this.failYN==true;
 		return a;
 	} ,
 	insured: function() {
-		a=this.insuredYN=="Y";
+		a=this.insuredYN==true;
 		return a;
 	}
 
