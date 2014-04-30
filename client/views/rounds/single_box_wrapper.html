@@ -1,9 +1,7 @@
 <template name="singleBoxWrapper">
-    {{#if rowStart}}
-        <tr>
-    {{/if}}
-        {{> singleBox}}
-    {{#if rowEnd}}
-        </tr>
-    {{/if}}
+    <tr>
+        {{#each this}}
+            {{> singleBox}}
+        {{/each}}
+    </tr>
 </template>

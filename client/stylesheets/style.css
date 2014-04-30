@@ -129,6 +129,7 @@ body {
     width: 100px;
     height: 100px;
     text-align: center;
+    border:1px solid black;
 }
 
 .green-box{
@@ -136,6 +137,7 @@ body {
     width: 100px;
     height: 100px;
     text-align: center;
+    border:1px solid black;
 }
 
 .big-font{

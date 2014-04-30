@@ -2,20 +2,22 @@
     {{#if failure}}
         <td class="red-box">
             {{#if insured}}
-                <span class="top-right-yellow">x</span>
+                <p class="top-right-yellow">x</p>
             {{else}}
-                <span class="top-right-blue">x</span>
+                <p class="top-right-blue">x</p>
             {{/if}}
+            <br/>
             <p>{{roundNum}}</p>
             <p>{{payout}}</p>
         </td>
     {{else}}
         <td class="green-box">
             {{#if insured}}
-            <span class="top-right-yellow">x</span>
+            <p class="top-right-yellow">x</p>
             {{else}}
-            <span class="top-right-blue">x</span>
+            <p class="top-right-blue">x</p>
             {{/if}}
+            <br/>
             <p>{{roundNum}}</p>
             <p>{{payout}}</p>
         </td>
